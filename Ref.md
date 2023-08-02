@@ -26,6 +26,8 @@ Combinatorial Problems - Enric Rodr´ıguez-Carbonell, Universitat Politècnica 
 1. [timetabling problem](https://www.sciencedirect.com/science/article/abs/pii/S1574652606800131)
 2. [full-chip routing is a very complex combinatorial problem](https://www.sciencedirect.com/science/article/abs/pii/B9780123743640500199)
 3. [Proving NP-Hard is NP-Hard](https://dspace.mit.edu/bitstream/handle/1721.1/49420/6-854JFall2001/NR/rdonlyres/Electrical-Engineering-and-Computer-Science/6-854JFall2001/E71F81CC-FC34-4A08-A88A-FF983ACC14D0/0/lect11_07.pdf)
+4. [Knapsack and TSP with constraints, variables and indicator](https://annealing-cloud.com/en/knowledge/1.html)
+5. [Algorithms and Models For Combinatorial Optimization Problems - Albert Einstein Fernandes Muritiba](http://amsdottorato.unibo.it/2897/1/FernandesMuritiba_AlbertEinstein_tesi.pdf)
 
 # Vertex Cover
 1. [A Simple Probabilistic Approximation Algorithm for Vertex Cover - Leonard Pitt, Yale University](https://cpsc.yale.edu/sites/default/files/files/tr404.pdf)
