@@ -30,4 +30,6 @@ Combinatorial Problems - Enric Rodr´ıguez-Carbonell, Universitat Politècnica 
 # Vertex Cover
 1. [A Simple Probabilistic Approximation Algorithm for Vertex Cover - Leonard Pitt, Yale University](https://cpsc.yale.edu/sites/default/files/files/tr404.pdf)
 2. [An ant colony optimization algorithm with improved pheromone correction strategy for the minimum weight vertex cover problem - Raka Jovanovic and Milan Tuba, Megatrend University Belgrade](https://www.sciencedirect.com/science/article/abs/pii/S1568494611001827)
-3. 
+3. [A Genetic Algorithm for the Minimum Vertex Cover Problem with Interval-Valued Fitness - Benedek Nagy and Péter Szokol, Eastern Mediterranean University](http://acta.uni-obuda.hu/Nagy_Szokol_111.pdf)
+4. [Using Genetic Algorithms to Approximate a Minimum Vertex Cover in Simple Graphs - Eliza Glick, Whitman College]
+5. 
