@@ -39,3 +39,7 @@ Runtime: 17 seconds
 Runtime: 18 seconds
 * Best tour: [6, 6, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
 * Best tour length: 13
+
+**Note:**
+1. The parameters used in the code can be tuned to improve the performance of the algorithm. Increase the number of ants and the number of iterations to improve the quality of the solutions
+2. Increasing the pheromone evaporation rate will make the algorithm less greedy, which can sometimes lead to better solutions
