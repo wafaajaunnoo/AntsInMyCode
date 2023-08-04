@@ -24,7 +24,8 @@ It is totally normal to have different outputs at each run.  This is because ACO
 * the random selection of initial cities for each ant
 * the random tie-breaking in the selection of the next city based on probabilities
   
-# Test 1: Change the number of ants to 20
+# Test 1: Decrease the number of ants
+--- num_ants = 20
 Runtime: 17 seconds
 
 -- the runtime is a bit weird.  
@@ -40,6 +41,19 @@ Runtime: 18 seconds
 * Best tour: [6, 6, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
 * Best tour length: 13
 
+# Test 2: Increase the number of ants
+--- num_cities = 15
+--- num_ants = 60
+Runtime: 1min 0secs
+
+## Output 1
+* Best tour: [11, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+* Best tour length: 16.54
+
+## Output 2
+* Best tour: [11, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+* Best tour length: 16.54
+  
 **Note:**
 1. The parameters used in the code can be tuned to improve the performance of the algorithm. Increase the number of ants and the number of iterations to improve the quality of the solutions
 2. Increasing the pheromone evaporation rate will make the algorithm less greedy, which can sometimes lead to better solutions
