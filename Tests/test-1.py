@@ -14,9 +14,10 @@ rho = 0.5     # Pheromone evaporation rate
 # Initialize pheromone levels on each edge using a matrix
 pheromone = np.ones((num_cities, num_cities))
 
-# Define the distance matrix (random values for demonstration purposes)
-# for each pair of cities, the function generates a random distance between 5 and 10.
-# The distance is rounded to two decimal places. The function returns the distance matrix.
+    '''Define the distance matrix (random values for demonstration purposes)
+    for each pair of cities, the function generates a random distance between 5 and 10.
+    The distance is rounded to two decimal places. The function returns the distance matrix.'''
+
 distance = np.random.randint(5, 10, size=(num_cities, num_cities))
 
 np.fill_diagonal(distance, 0)  # Set diagonal elements to 0 (distance to itself)
