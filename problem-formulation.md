@@ -1,11 +1,11 @@
 # 2. Combinatorial Problem Formulation
-In Artificial Intelligence, the following steps are to be followed when solving problems:
+<!--In Artificial Intelligence, the following steps are to be followed when solving problems:
 
 1. Problem definition (specify inputs and acceptable solutions).
 2. Problem analysis.
 3. Knowledge representation (provide detailed information about problem and define all possible techniques).
 4. Problem-solving (selection of best technique(s)).
-
+-->
 Logically, I start this section by defining a TSP.  I follow with the simplification of the problem's complexity, which I define as the *constraints*, *objectives* and *miscellaneous **relevant** information that add to the complexity*.  Later, I argue the rationale behind my choice to solve the TSP with the Ant Colony Optimization (ACO) algorithm.
 
 ## 2.1 The Travelling Salesman Problem
@@ -21,12 +21,14 @@ Logically, I start this section by defining a TSP.  I follow with the simplifica
 An optimization problem is represented by an objective function and its constraints.
 ### 2.2.1 Constraints
 ### 2.2.2 Objectives
+One of the core tenets of the philosophy of the TSP is that there is no single, perfect solution to any problem. The main objective of the TSP is to find the shortest possible route that visits each city exactly once and returns to the origin city. However, the shortest route may not always be the best route, as it may take longer if it passes through more difficult terrain. Our aim here is to find a solution that is good enough, rather than a perfect solution.
 ### 2.2.3 Miscellanous
 
 ## 2.3 Problem-solving
 -- knowledge representation (provide detailed information about problem and define all possible techniques).
 
 ### 2.3.1 Optimization Algorithms
+Finding an algorithm that reduces computation is necessary to solve the TSP.
 
 ### 2.3.2 Selection of best Technique
 
