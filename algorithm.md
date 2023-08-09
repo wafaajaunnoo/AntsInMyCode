@@ -1,5 +1,5 @@
 # 3. Intuition of the algorithm's operation
-In this section, I design the algorithm for the TSP basing on the behaviour of ants, which is inspired by the principles of a Turing Machine.  I describe the optimization algorithm I implemented and I provide an intuition on how it works for the TSP I formulated previously. 
+In this section, I design the algorithm for the TSP basing on the behaviour of ants, while taking inspiration from the principles of a Turing Machine.  I describe the optimization algorithm I implemented and I provide an intuition on how it works for the TSP I formulated previously. 
 
 ## 3.1 Ant Colony Optimization
 
