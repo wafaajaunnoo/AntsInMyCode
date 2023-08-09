@@ -39,7 +39,7 @@ def is_valid_time_window(visited, current_city, time_windows):
 
 ### Define Utility-Based Agent (UBA) Function
 The function `utility_based_agent` takes 5 parameters:
-1. `cities`: City coordinates represented as (x,y)
+1. `cities`: City coordinates represented as (x,y).
 2. `pheromone`: Matrix to represent pheromone levels (PL) between cities. `pheromone[i,j]` represents PL between city `i` and city `j`.
 3. `alpha`: Controls the importance of pheromone level in decision-making.
 4. `beta`: Controls the importance of cost in decision-making.
