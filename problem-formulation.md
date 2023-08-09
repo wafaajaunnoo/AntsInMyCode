@@ -6,23 +6,35 @@
 3. Knowledge representation (provide detailed information about problem and define all possible techniques).
 4. Problem-solving (selection of best technique(s)).
 -->
-Logically, I start this section by defining a TSP.  I follow with the simplification of the problem's complexity, which I define as the *constraints*, *objectives* and *miscellaneous **relevant** information that add to the complexity*.  Later, I argue the rationale behind my choice to solve the TSP with the Ant Colony Optimization (ACO) algorithm.
+Logically, I start this section by defining a TSP.  I follow with the simplification of the problem's complexity, which I define as the *constraints*, *objectives* and *miscellaneous **relevant** information that adds to the complexity*.  Later, I argue the rationale behind my choice to solve the TSP with the Ant Colony Optimization (ACO) algorithm.
 
 ## 2.1 The Travelling Salesman Problem
--- problem definition ( add important points, anything from research papers) 
+
+For simplicity, I formulate the following TSP:
+given a graph _G_ with _n_ cities, each city has a different time window during which the salesman can arrive and is denoted as a node in _G_.  The distances between pairs of cities in _G_ are symmetric (the distance between City A and City B is the same as the distance between City B and City A).  Provide a route that minimizes both the distance travelled and time window violations and also forms a Hamiltonian Cycle while satisfying all constraints and objectives mentioned below.
 
 -- Why the problem is NP-Hard
 * the number of alternative solution sequences rises exponentially with the number of cities.
 * no known algorithm exists to solve it in polynomial time
 
 [Proof that TSP is np-Hard](https://www.tutorialspoint.com/proof-that-travelling-salesman-problem-is-np-hard)
-## 2.2 Problem complexity
+## 2.2 Problem Complexity
 -- problem analysis
 An optimization problem is represented by an objective function and its constraints.
+
 ### 2.2.1 Constraints
+1. Each city can only be visited once.
+2. The salesman should arrive at each city within the specified time window.
+3. The salesman must minimize both the total distance travelled and the time window violations.
+4. The pheromone levels are dynamically updated.
+5. The salesperson must return to the starting city after visiting all cities.
+   
 ### 2.2.2 Objectives
-One of the core tenets of the philosophy of the TSP is that there is no single, perfect solution to any problem. The main objective of the TSP is to find the shortest possible route that visits each city exactly once and returns to the origin city. However, the shortest route may not always be the best route, as it may take longer if it passes through more difficult terrain. Our aim here is to find a solution that is good enough, rather than a perfect solution.
-### 2.2.3 Miscellanous
+One of the core tenets of the philosophy of the TSP is that there is no single, perfect solution to any problem. The objective function of the TSP is to minimize the total distance travelled and form a Hamiltonian Cycle while satisfying the above constraints. However, the shortest route may not always be the best route, as it may take longer if it passes through more difficult terrain. Ergo, our functional aim here is to find a solution that is good enough, rather than a perfect solution.
+
+### 2.2.3 Heuristics and Techniques
+1. Constructive heurisitics: I start the algorithm with an initial solution - a randomly selected city.
+2.  
 
 ## 2.3 Problem-solving
 -- knowledge representation (provide detailed information about problem and define all possible techniques).
