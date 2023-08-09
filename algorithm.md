@@ -26,10 +26,16 @@ read how [this repo](https://github.com/Akavall/AntColonyOptimization/blob/maste
 **Step n:**
 
 ## 3.3 Pseudocode
-The algorithm can be defined as follows:
+The algorithmic design can be defined as follows:
 
 ```
-# function
-    do while
-  end
+Procedure AntColonyOptimization:
+    Initialize necessary parameters and pheromone trials;
+    while not termination do:
+        Generate ant population;
+        Calculate fitness values associated with each ant;
+        Find best solution through selection methods;
+        Update pheromone trial;
+    end while
+end procedure
 ```
