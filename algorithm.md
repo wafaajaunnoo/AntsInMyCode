@@ -1,12 +1,19 @@
 # 3. Intuition of the algorithm's operation
-In this section, I describe the optimization algorithm I implemented and I provide an intuition on how it works for the TSP I formulated previously.
+In this section, I design the algorithm for the TSP basing on the behaviour of ants, which is inspired by the principles of a Turing Machine.  I describe the optimization algorithm I implemented and I provide an intuition on how it works for the TSP I formulated previously. 
 
 ## 3.1 Ant Colony Optimization
 
 ### A brief Overview
 
 ### The Algorithm
-I begin the algorithm by first initializing  a pheromone trail between all cities.  The algorithm brings in a number of ants, each of which will navigate the search space randomly, leaving pheromone behind, until they have visited all cities. I proceed the algorithm by depositing the most pheromone on the shortest path found by the ants.  This will make it more likely that other ants will follow that path in the future.  I repeat this process for a number of iterations.  Later on, I converge the algorithm on the shortest path.  To help visualize the solution and better understand how the algorithm works, I print the cheapest path and its length.  I also plot the cheapest path on a labelled 3D subplot that is embedded within a larger graph.
+To solve any problem that exists, a Turing Machine would:
+1. Start with an input string on its tape.
+2. Use its rules to process the input, one symbol at a time.
+3. Reach a state where it has solved the problem.
+4. Outputs the answer.
+5. Give up if a solution is not found.
+   
+I begin the algorithm by first initializing a pheromone trail between all cities.  The algorithm brings in a number of ants, each of which will navigate the search space randomly, leaving pheromone behind, until they have visited all cities. I set the constraints and objectives of the algorithm.  I proceed the algorithm by depositing the most pheromone on the shortest path found by the ants.  This will make it more likely that other ants will follow that path in the future.  I repeat this process for a number of iterations.  Later on, I converge the algorithm on the shortest path.  To help visualize the solution and better understand how the algorithm works, I print the cheapest path and its length.  I also plot the cheapest path on a labelled 3D subplot that is embedded within a larger graph.
 
 ## 3.2 Steps
 
