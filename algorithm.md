@@ -18,6 +18,7 @@ I begin the algorithm by first initializing a pheromone trail between all cities
 ## 3.2 Steps
 
 read how [this repo](https://github.com/Akavall/AntColonyOptimization/blob/master/README.md) explains the algorithm.
+[also read](https://www.matec-conferences.org/articles/matecconf/pdf/2018/105/matecconf_iswso2018_03015.pdf)
 
 **Step 1:**
 
