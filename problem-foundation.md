@@ -10,11 +10,11 @@ Briefly: The TSP is an NP-hard combinatorial optimisation problem, which means t
 * no known algorithm exists to solve it in polynomial time
 
 [Proof that TSP is np-Hard](https://www.tutorialspoint.com/proof-that-travelling-salesman-problem-is-np-hard)
-### 2.2 Problem complexity
+## 2.2 Problem complexity
 
-#### 2.2.1 Constraints
-#### 2.2.2 Objectives
-#### 2.2.3 Miscellanous
+### 2.2.1 Constraints
+### 2.2.2 Objectives
+### 2.2.3 Miscellanous
 
 
 
