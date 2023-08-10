@@ -9,9 +9,9 @@ This document is divided into the following sections:
     * Pseudocode
     * Steps
 3. [PEAS Definition](#)
-4. [Codes and their behaviours](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/code-breakdown.md)
+4. [Python Program](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/code-breakdown.md)
 5. [Tests' results and analyses](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/Tests/tests.md)
-  * Optimal Path Identification
+     * Optimal Path Identification
     
 **Submission date:** 12<sup>th</sup> August 2023
 
