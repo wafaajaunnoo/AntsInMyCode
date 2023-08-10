@@ -6,18 +6,33 @@
 3. Knowledge representation (provide detailed information about problem and define all possible techniques).
 4. Problem-solving (selection of best technique(s)).
 -->
-Logically, I start this section by defining a TSP.  I follow with the simplification of the problem's complexity, which I define as the *constraints*, *objectives* and *miscellaneous **relevant** information that adds to the complexity*.  Later, I argue the rationale behind my choice to solve the TSP with the Ant Colony Optimization (ACO) algorithm.
+I start this section by defining a TSP.  I follow with the simplification of the problem's complexity, which I define as the *constraints*, *objectives* and *miscellaneous **relevant** information that adds to the complexity*.  Later, I argue the rationale behind my choice to solve the TSP with the Ant Colony Optimization (ACO) algorithm.
 
 ## 2.1 The Travelling Salesman Problem
+The TSP is an NP-Hard combinatorial problem which consists of a salesman and a set of cities.  The salesman has to visit each city, starting from a certain one, and return to the same city at the end of the journey.  The main challenge of the problem is that the salesman wants to minimize the total length and cost of the trip.
 
+In the case of **_n_** cities, the possibilities of getting a solution are given by 
+
+$$ n! \over 2 $$
+
+Given **_n_** = 30.  If a computer can do 10<sup>6</sup> calculations in 1 second, it will take 
+
+$$ 30! \over (2 \times 10^6) $$ 
+
+seconds to solve the problem, or
+
+$$ 30! \over (2 \times 10^6 \times 24 \times 60 \times 60) $$ 
+
+days. And that is huge! It is impossible to find all possible routes and then get the optimal solution.  Therefore, the TSP is an NP-Hard problem.  The discovery of a fast algorithm to solve it will mean that there will be fast algorithms to solve all nP-Hard problems.
+
+### Context:
+My father is a salesman who must deliver his merchandise to n shops around Mauritius by car. Each shop has different opening and closing hours. Once my father leaves home, he must continue driving forward to each shop and return home only after completing all deliveries. His goal is to maximize efficiency and profit by selecting the most economical path. Therefore, his objective is to optimize his route, ensuring that he covers all shops in a single continuous journey while adhering to their operating hours.
+
+### TSP Formulation
 For simplicity, I formulate the following TSP:
-given a graph _G_ with _n_ cities, each city has a different time window during which the salesman can arrive and is denoted as a node in _G_.  The distances between pairs of cities in _G_ are symmetric (the distance between City A and City B is the same as the distance between City B and City A).  Provide a route that minimizes both the distance travelled and time window violations and also forms a Hamiltonian Cycle while satisfying all constraints and objectives mentioned below.
 
--- Why the problem is NP-Hard
-* the number of alternative solution sequences rises exponentially with the number of cities.
-* no known algorithm exists to solve it in polynomial time
+Given a graph **_G_** representing a set of **_n_** cities, where each city is denoted as a node in **_G_** and has a different time window during which the salesman can arrive.  The distances between pairs of cities in _G_ are symmetric (the distance between City A and City B is identical to the distance between City B and City A).  Find an optimal route that minimizes both the total distance travelled and the time window violations by the salesman.  Other than satisfying all constraints, the route must form a Hamiltonian Cycle.
 
-[Proof that TSP is np-Hard](https://www.tutorialspoint.com/proof-that-travelling-salesman-problem-is-np-hard)
 ## 2.2 Problem Complexity
 -- problem analysis
 An optimization problem is represented by an objective function and its constraints.
