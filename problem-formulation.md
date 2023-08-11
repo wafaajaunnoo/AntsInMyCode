@@ -26,6 +26,8 @@ $$ 30! \over (2 \times 10^6 \times 24 \times 60 \times 60) $$
 days. _And that is huge!_ It is impossible to find all possible routes and then get the optimal solution.  Therefore, the TSP is an NP-Hard problem.  The discovery of a fast algorithm to solve it will imply the existence of algorithms to solve all NP-Hard problems.
 
 ### Context:
+In particular, I outline a scenario to show the implementation of TSP in the real world.
+
 My father is a salesman who must deliver his merchandise to **_n_** shops around Mauritius by car. Each shop has different opening and closing hours. Once my father leaves home, he must continue driving forward to each shop and return home only after completing all deliveries. His goal is to maximize efficiency and profit by selecting the most economical path. Therefore, his objective is to optimize his route, ensuring that he covers all shops in a single continuous journey while adhering to their operating hours.
 
 ### TSP Formulation
@@ -56,7 +58,7 @@ In theoretical Computer Science, TSP is solved using approximation algorithms to
 2. The branch and bound method
 3. The nearest neighbour method
 
-While all of these methods provide optimal solutions to TSP, they are rarely useful beyond the boundaries of theoretical Computer Science.  Therefore, academics came up with Evolutionary Optimization Algorithms. [6](https://www.sciencedirect.com/science/article/pii/S089812211101073X)
+While all of these methods provide optimal solutions to TSP, they are rarely useful beyond the boundaries of theoretical Computer Science.  Therefore, academics came up with Evolutionary Optimization Algorithms. <sup><sub>[[6]](https://www.sciencedirect.com/science/article/pii/S089812211101073X).</sub></sup>
 
 ### 2.3.1 Evolutionary Optimization Algorithms
 Finding an algorithm that reduces computation is necessary to solve the TSP.  The Ant Colony Optimization (ACO) algorithm is a good fit for discrete and non-deterministic optimization problems like the TSP because the algorithm searched through the solution space efficiently.  Ordinarily, genetic algorithms and simulated annealing provide efficient and good solutions to the TSP but are more complex to implement and tune than ACO.  In sum, the ACO algorithm is a better fit to solve the TSP.
