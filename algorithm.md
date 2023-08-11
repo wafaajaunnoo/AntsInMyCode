@@ -18,6 +18,7 @@ I begin the algorithm by first initializing a pheromone trail between all cities
 ## 3.2 Steps
 
 read how [this repo](https://github.com/Akavall/AntColonyOptimization/blob/master/README.md) explains the algorithm.
+
 [also read](https://www.matec-conferences.org/articles/matecconf/pdf/2018/105/matecconf_iswso2018_03015.pdf)
 
 **Step 1:**
@@ -29,40 +30,8 @@ read how [this repo](https://github.com/Akavall/AntColonyOptimization/blob/maste
 ## 3.3 Pseudocode
 The algorithmic design can be defined as follows:
 
+You can view the codes for the algorithmic design [here]().
 
-**Procedure AntColonyOptimizationForTSP:**
+<img width="573" alt="Screenshot 2023-08-11 at 22 32 46" src="https://github.com/wafaajaunnoo/AntsInMyCode/assets/95095359/fe23a9d5-ca73-46c1-8414-c296d0fab371">
 
-   **Begin**
-   
-    initialize necessary parameters and pheromone trials
-    
-    **while** stopping criterion not satisfied **do**
-    
-         position each ant in a random starting node
-         
-         generate ant population
-         
-         **repeat**
-         
-               **for each** ant **do**
-               
-                  choose next node by applying the state transition rule
-                  
-                  apply dynamic pheromone update
-                  
-               **end for**
-               
-         **until** each ant has found a solution
-         
-        calculate fitness values associated with each ant
-        
-        find best solution through selection methods
-        
-        update best solution
-        
-        update pheromone trial
-        
-    **end while**
-    
-**end procedure**
 
