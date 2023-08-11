@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>pseudocode.js Samples with KaTeX</title>
+
+    <!-- Setup KaTeX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"
+            integrity="sha512-EKW5YvKU3hpyyOcN6jQnAxO/L8gts+YdYV6Yymtl8pk9YlYFtqJgihORuRoBXK8/cOIlappdU6Ms8KdK6yBCgA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS_CHTML-full"
+    integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+    <!-- Pseudocode -->
+    <link rel="stylesheet" href="pseudocode.css" type="text/css">
+    <script src="pseudocode.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <pre id="test-basics">
+        <pre id="test-codes test-examples-custom-title" class="scopeline-pseudocode">
+            \begin{algorithm}
+            \caption{Algorithmic Design of ACO to Solve a TSP}
+            \begin{algorithmic}
+            \ENSURE All cities are visited, Route forms Hamiltonian Cycle
+            \INPUT Heuristics
+            \OUTPUT best path, best path length, route plot in 3D graph
+            
+            \end{algorithmic}
+            \begin{algorithmic}
+            
+            \PROCEDURE{FindSolution}{} 
+                \STATE Initialize necessary parameters and pheromone trials
+                \RETURN $distance$, $cost$ and $isValidTimeWindow$
+                \WHILE{stopping criterion not satisfied}
+                \STATE position each ant in a random starting node
+                \STATE generate ant population
+                \REPEAT
+                \FOR {each ant}
+                \STATE choose next node by applying the state transition rule
+                \STATE apply dynamic pheromone update
+                \ENDFOR \STATE {\bfseries end for}
+                \UNTIL {each ant has found a solution}
+                \STATE Calculate fitness values associated with each ant
+                \STATE Find best solution through selection methods
+                \STATE Update best solution
+                \STATE Update pheromone trial
+                \ENDWHILE \STATE {\bfseries end while}
+                
+            \ENDPROCEDURE \STATE \bfseries end procedure
+            \end{algorithmic}
+            \end{algorithm}
+            
+        </pre>
+    </pre>
+    <script>
+        pseudocode.renderElement(document.getElementById("test-basics"),
+                                 {
+                                     lineNumber: false,
+                                     noEnd: true
+                                 });
+        pseudocode.renderElement(document.getElementById("test-codes"));
+        pseudocode.renderElement(document.getElementById("test-examples"),
+                                 {
+                                     lineNumber: true,
+                                     noEnd: false
+                                 });
+        pseudocode.renderElement(document.getElementById("test-examples-custom-title"),
+                                 {
+                                     lineNumber: true,
+                                     noEnd: false,
+                                     titlePrefix: "My pretty Algorithm"
+                                 });                                   
+        pseudocode.renderClass("scopeline-pseudocode", { scopeLines: true });
+    </script>
+
+
+</body>
+</html>
