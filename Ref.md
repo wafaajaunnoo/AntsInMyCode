@@ -5,4 +5,5 @@
 4. [The Travelling Salesman Problem - Corinne Brucato, University of Pittsburgh, 2013](https://www.mathematics.pitt.edu/sites/default/files/TSP.pdf)
 5. [Traveling Salesman Problem for Deliveries](https://blog.routific.com/blog/travelling-salesman-problem)
 6. [Evolutionary algorithm to travelling salesman problems](https://www.sciencedirect.com/science/article/pii/S089812211101073X)
+7. [Dorigo, Marco & Birattari, Mauro & Stützle, Thomas. (2006). Ant Colony Optimization. Computational Intelligence Magazine, IEEE. 1. 28-39. 10.1109/MCI.2006.329691. ](https://www.researchgate.net/publication/308953674_Ant_Colony_Optimization)
    
