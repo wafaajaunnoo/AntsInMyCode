@@ -29,14 +29,40 @@ read how [this repo](https://github.com/Akavall/AntColonyOptimization/blob/maste
 ## 3.3 Pseudocode
 The algorithmic design can be defined as follows:
 
-```
-Procedure AntColonyOptimization:
-    Initialize necessary parameters and pheromone trials;
-    while not termination do:
-        Generate ant population;
-        Calculate fitness values associated with each ant;
-        Find best solution through selection methods;
-        Update pheromone trial;
-    end while
-end procedure
-```
+
+**Procedure AntColonyOptimizationForTSP:**
+
+   **Begin**
+   
+    initialize necessary parameters and pheromone trials
+    
+    **while** stopping criterion not satisfied **do**
+    
+         position each ant in a random starting node
+         
+         generate ant population
+         
+         **repeat**
+         
+               **for each** ant **do**
+               
+                  choose next node by applying the state transition rule
+                  
+                  apply dynamic pheromone update
+                  
+               **end for**
+               
+         **until** each ant has found a solution
+         
+        calculate fitness values associated with each ant
+        
+        find best solution through selection methods
+        
+        update best solution
+        
+        update pheromone trial
+        
+    **end while**
+    
+**end procedure**
+
