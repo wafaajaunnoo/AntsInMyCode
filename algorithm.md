@@ -20,6 +20,17 @@ read how [this repo](https://github.com/Akavall/AntColonyOptimization/blob/maste
 
 [also read](https://www.matec-conferences.org/articles/matecconf/pdf/2018/105/matecconf_iswso2018_03015.pdf)
 
+important points: the pheromone levels are dynamically updated so that future generations of ants are not confused by the old pheromone trails.
+
+### Agent Behaviour
+* The agent will be deployed in the environment and it will use the Depth First Search(DFS) to find all the possible routes. Finally, it will evaluate each path based on the Utility that Lower ETA better the path.
+
+### State Transition Rules
+In ACO, there are rules for state transitions and pheromone updates. For the state transition rule, the probability that an ant transits from node i to j is determined by Eq. 1.
+
+𝑝 <sub>𝑖,𝑗</sub> =𝜏<sup>α</sup><sub>𝑖,𝑗</sub>⋅𝜂β𝑖,𝑗/Σ𝑙∉𝑆𝜏α𝑖,𝑙⋅𝜂β𝑖,𝑙,
+(1)
+where α and β are parameters that determine the amount of pheromones and pheromone reinforcement.
 **Step 1:**
 
 **Step 2:**
