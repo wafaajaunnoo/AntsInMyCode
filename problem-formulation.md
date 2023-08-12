@@ -33,7 +33,8 @@ My father is a salesman who must deliver his merchandise to **_n_** shops around
 ### TSP Formulation
 For simplicity, I formulate the following TSP:
 
-Given a graph **_G_** representing a set of **_n_** cities, where each city is denoted as a node in **_G_** and has a different time window during which the salesman can arrive.  The distances between pairs of cities in _G_ are symmetric.  Find an optimal route that minimizes both the total distance travelled and the time window violations by the salesman.  Other than satisfying all constraints, the route must form a Hamiltonian Cycle.
+Given a graph **_G_ = (_n_, _A_)** where **_n_** is the set of nodes or cities, and **_A_** is the set of edges connecting the nodes **_n_**. Each city is denoted as a node in **_G_** and has a different time window during which the salesman can arrive.  The distances between pairs of cities in _G_ are symmetric. 
+ Find an optimal route that minimizes both the total distance travelled and the time window violations by the salesman.  Other than satisfying all constraints, the route must form a Hamiltonian Cycle.
 
 ## 2.2 Problem Complexity
 
@@ -44,7 +45,7 @@ A logical way to present an optimization problem is by its constraints and an ob
 2. The salesman should arrive at each city within the specified time window.
 3. The salesman must minimize both the total distance travelled and the time window violations.
 4. The pheromone levels are dynamically updated.
-5. The salesperson must return to the starting city after visiting all cities.
+5. The salesperson must return to the initial city after visiting all cities.
    
 ### 2.2.2 Objectives
 One of the core tenets of the philosophy of the TSP is that there is no single, perfect solution to any problem. The **objective function** of the TSP is to minimize the total distance travelled and time window violations, and to form a Hamiltonian Cycle while satisfying all constraints. 
