@@ -14,23 +14,40 @@ To solve any problem that exists, a Turing Machine would:
    
 I begin the algorithm by first initializing a pheromone trail between all cities.  The algorithm brings in a number of ants, each of which will navigate the search space randomly, leaving pheromone behind, until they have visited all cities. I set the constraints and objectives of the algorithm.  I proceed with the algorithm by depositing the most pheromone on the shortest path found by the ants.  This will make it more likely that other ants will follow that path in the future.  I repeat this process for a number of iterations.  Later on, I converge the algorithm on the shortest path.  To help visualize the solution and better understand how the algorithm works, I print the cheapest path and its length.  I also plot the cheapest path on a labelled 3D subplot that is embedded within a larger graph.
 
+important points: the pheromone levels are dynamically updated so that future generations of ants are not confused by the old pheromone trails.
+
+#### Initialization  
+* The agent is deployed in the search space
+* In the `utility_based_agent` function, an agent is initialized with a random starting city `current_point`.
+* The visited status of all cities is marked as `False` except for the starting city, which is set to `True`.
+* In the `ant_colony_optimization` function, pheromone matrices are initialized.
+
+#### Agent Behaviour
+* The agent uses ACO to find all the possible routes. 
+* The agent considers time-based penalties and pheromone levels.
+* The agent evaluates each path based on the utilities provided.
+
+#### State Transition 
+
+In the algorithm, there are 4 state transitions for the agents:
+
+1. Initialization State: The agent starts in this state. It randomly selects a starting city, marks it as visited, and adds it to the path.
+2. Path Construction State: The agent repeatedly performs the aforementioned actions until all cities are visited, while considering pheromone levels, cost, and penalties.
+3. Returning to the initial city.
+4. Termination State.
+
+#### Global and Local Updates
+The primary updates that occur relate to pheromone levels.
+
+#### Termination Conditions
+
 ## 3.2 Steps
 
 read how [this repo](https://github.com/Akavall/AntColonyOptimization/blob/master/README.md) explains the algorithm.
 
 [also read](https://www.matec-conferences.org/articles/matecconf/pdf/2018/105/matecconf_iswso2018_03015.pdf)
 
-important points: the pheromone levels are dynamically updated so that future generations of ants are not confused by the old pheromone trails.
 
-### Agent Behaviour
-* The agent will be deployed in the environment and it will use the Depth First Search(DFS) to find all the possible routes. Finally, it will evaluate each path based on the Utility that Lower ETA better the path.
-
-### State Transition Rules
-In ACO, there are rules for state transitions and pheromone updates. For the state transition rule, the probability that an ant transits from node i to j is determined by Eq. 1.
-
-𝑝 <sub>𝑖,𝑗</sub> =𝜏<sup>α</sup><sub>𝑖,𝑗</sub>⋅𝜂β𝑖,𝑗/Σ𝑙∉𝑆𝜏α𝑖,𝑙⋅𝜂β𝑖,𝑙,
-(1)
-where α and β are parameters that determine the amount of pheromones and pheromone reinforcement.
 **Step 1:**
 
 **Step 2:**
