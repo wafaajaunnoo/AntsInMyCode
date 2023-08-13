@@ -8,11 +8,11 @@ This document is divided into the following sections:
 2. [Intuition of the Algorithm's Operation](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/algorithm.md)
     * Pseudocode
     * Steps
-3. [PEAS Definition](#)
+3. [PEAS Definition](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/peas-def.md)
 4. [Python Program](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/code-breakdown.md)
+    * Optimal Path Identification
 5. [Tests' results and analyses](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/Tests/tests.md)
-     * Optimal Path Identification
-    
-**Submission date:** 12<sup>th</sup> August 2023
+     
+**Submission date:** 18<sup>th</sup> August 2023
 
 **Grade:** Not graded yet.
