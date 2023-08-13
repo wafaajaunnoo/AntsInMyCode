@@ -51,6 +51,7 @@ The function `utility_based_agent` takes 5 parameters:
     * The arrival time at that city.
 2. `unvisited`: A list to store the unvisited cities.
 3.  
+
 ```python
 def utility_based_agent(cities, pheromone, alpha, beta, time_windows):
     visited = [[False, 0] for _ in range(len(cities))]  
