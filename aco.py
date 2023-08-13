@@ -133,7 +133,7 @@ def ant_colony_optimization(cities, n_ants, n_iterations, alpha, beta, evaporati
     return best_path, best_path_length
 
 if __name__ == "__main__":
-    np.random.seed(42)
+    np.random.seed(42) # initializes the random number generator in NumPy to be 42, ensuring the consistency of the sequence of randomly generated num across runs
     cities = np.random.rand(17, 3)
 
     #generate random time windows for each city (start time, end time)
