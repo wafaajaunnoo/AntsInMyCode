@@ -52,10 +52,9 @@ def utility_based_agent(cities, pheromone, alpha, beta, time_windows):
 
     '''
     main loop.
-    'unvisited': list of unvisited cities
-    'probabilities': array to store probability of selecting each unvisited city as next destination
-    Probability value is calculated based on pheromone levels, cost and time window constraints.
-
+    - 'unvisited': list of unvisited cities
+    - 'probabilities': array to store probability of selecting each unvisited city as next destination
+    - Probability value is calculated based on pheromone levels, cost and time window constraints.
     '''
     while False in [v[0] for v in visited]:
         unvisited = np.where(np.logical_not([v[0] for v in visited]))[0]
@@ -74,14 +73,14 @@ def utility_based_agent(cities, pheromone, alpha, beta, time_windows):
                 probabilities[i] = pheromone[current_point, unvisited_point]**alpha / cost(cities[current_point], cities[unvisited_point])**beta + penalties
 
         if np.sum(probabilities) == 0:
-            # If no valid time window, allow visiting any city (non-time window constraint)
+            #if no valid time window exists, allow visiting any city 
             probabilities = np.ones(len(unvisited))
 
         probabilities /= np.sum(probabilities)
 
         next_point = np.random.choice(unvisited, p=probabilities)
         arrival_time = max(visited[current_point][1] + cost(cities[current_point], cities[next_point]), time_windows[next_point][0])
-        path.append(next_point + 1)  # Add 1 to the city number to adjust for starting from 1
+        path.append(next_point + 1)  #add 1 to the city number to adjust for starting from 1
         path_length += cost(cities[current_point], cities[next_point])
         visited[next_point][0] = True
         visited[next_point][1] = arrival_time
@@ -89,6 +88,11 @@ def utility_based_agent(cities, pheromone, alpha, beta, time_windows):
 
     return path, path_length
 
+    '''
+    - uses the principles of ACO to iteratively update pheromone levels on paths between cities
+    - employs utility-based agents/ants that make probabilistic decisions while considering all constraints
+    - constructs paths based pn probabilistic decision-making.
+    '''
 def ant_colony_optimization(cities, n_ants, n_iterations, alpha, beta, evaporation_rate, Q, time_windows):
     n_cities = len(cities)
     pheromone = np.ones((n_cities, n_cities))
@@ -112,18 +116,18 @@ def ant_colony_optimization(cities, n_ants, n_iterations, alpha, beta, evaporati
 
         for path, path_length in zip(paths, path_lengths):
             for i in range(n_cities - 1):
-                pheromone[path[i] - 1, path[i + 1] - 1] += Q / path_length  # Subtract 1 to adjust for starting from 1
-            pheromone[path[-1] - 1, path[0] - 1] += Q / path_length  # Subtract 1 to adjust for starting from 1
+                pheromone[path[i] - 1, path[i + 1] - 1] += Q / path_length  # subtract 1 to adjust for starting from 1
+            pheromone[path[-1] - 1, path[0] - 1] += Q / path_length  # subtract 1 to adjust for starting from 1
 
-        # Dynamic pheromone update based on best path length found so far
-        if iteration % 10 == 0:  # Adjust evaporation rate every 10 iterations (can be adjusted as needed)
+        #updating pheromone levels dynamically  based on best path length found so far
+        if iteration % 10 == 0:  # evaporation rate is adjusted every 10 seconds
             best_path_length_so_far = min(path_lengths)
             evaporation_rate = 0.5 * (1 - (best_path_length_so_far / best_path_length))  # Example adjustment formula
 
         #print(f"Iteration {iteration+1} - Pheromone Matrix:")
         #print(pheromone) -- gives output for the pheromone level at each
 
-    # Ensure the best path ends with the same city as the first visited city
+    #ensure the best path ends with the same city as the first visited city
     best_path.append(best_path[0])
 
     return best_path, best_path_length
@@ -132,34 +136,32 @@ if __name__ == "__main__":
     np.random.seed(42)
     cities = np.random.rand(17, 3)
 
-    # Generate random time windows for each city (start time, end time)
+    #generate random time windows for each city (start time, end time)
     time_windows = np.random.randint(0, 100, size=(len(cities), 2))
 
     best_path, best_path_length = ant_colony_optimization(cities, n_ants=30, n_iterations=100, alpha=1, beta=1, evaporation_rate=0.5, Q=1, time_windows=time_windows)
 
     print("Cheapest path:", best_path)
     print("Cheapest path length:", best_path_length)
-    # Extract x, y, and z coordinates of all cities
+    
     x_coords = cities[:, 0]
     y_coords = cities[:, 1]
     z_coords = cities[:, 2]
 
-    # Plot all cities in 3D
+    #plot all cities in 3D
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     ax.scatter(x_coords, y_coords, z_coords, c='b', marker='o', label='Cities')
 
-    # Plot the path taken by the algorithm in 3D
     path_x = x_coords[np.array(best_path) - 1]
     path_y = y_coords[np.array(best_path) - 1]
     path_z = z_coords[np.array(best_path) - 1]
     ax.plot(path_x, path_y, path_z, c='r', marker='o', label='Path', linestyle='-')
 
-    # Plot the starting city as a green star
     start_city_x, start_city_y, start_city_z = x_coords[best_path[0] - 1], y_coords[best_path[0] - 1], z_coords[best_path[0] - 1]
     ax.scatter(start_city_x, start_city_y, start_city_z, c='g', marker='*', s=200, label='Starting City')
 
-    # Add city labels
+    #adding city labels
     for i, (x, y, z) in enumerate(zip(x_coords, y_coords, z_coords)):
         ax.text(x, y, z, f'City {i + 1}', color='black', fontsize=8)
 
