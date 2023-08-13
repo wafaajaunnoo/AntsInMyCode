@@ -6,15 +6,26 @@ In this section, I provide a structured perspective on how the ACO algorithm I d
 
 For detailed tests and benchmarking, please visit [this GitHub folder](https://github.com/wafaajaunnoo/AntsInMyCode/tree/main/Tests).
 
-Initially, with a TSP of 20 cities, the algorithm took a runtime of 48 seconds, and it also got stuck in a local optima.  The output also varied accross different runs.  i assume his is mainly of the stochastic nature of ACO, which arises from several sources, including:
+Initially, when dealing with a Traveling Salesman Problem (TSP) involving 20 cities, the algorithm exhibited a runtime of 48 seconds and became trapped in local optima. The output also exhibited variations across different runs. These phenomena are primarily attributed to the stochastic nature inherent in ACO, arising from several sources, including:
 
 1. The random initialization of pheromone levels.
 2. The random selection of initial cities for each ant.
-3. The random tie-breaking in the selection of the enxt city based on probabilities.
+3. The random tie-breaking during the selection of the next city based on probabilities.
 
-At this stage, I figured that the parameters used in the code can be tuned to improve the performance of the algorithm.  The number of ants and iterations were increased to improve the quality of the solutions.  An increase in the pheromone evaporation rate also made the algorithm less greedy, leading to better solutions.
+At this stage, I realized that tuning the parameters in the code could enhance the algorithm's performance. Increasing the number of ants and iterations served to improve the quality of solutions. Additionally, elevating the pheromone evaporation rate rendered the algorithm less greedy, resulting in superior solutions.
 
-For the same number of cities but a lower number of ants, the runtime improved from 48 seconds to 17 seconds.
+When maintaining the same number of cities but reducing the number of ants, the runtime improved significantly from 48 seconds to 17 seconds.
+
+To ensure the dynamic update of pheromone levels, the values were printed for each iteration using the following lines of code, which were subsequently commented out for sanity. 
+
+```python
+        print(f"Iteration {iteration+1} - Pheromone Matrix:")
+        print(pheromone) -- gives output for the pheromone level at each
+```
+
+The output gave something like this:
+
+--insert s.s of PL
 
 ## 3.2 Environment
 
@@ -25,7 +36,7 @@ The environment for the TSP consists of a graph with a set of cities and their c
 3. Cities must be vities during their respective time windows.
 4. If time windows are violated, the violations should be minimized.
 
-These constraints affect the feasibiloty of the solutions.
+These constraints affect the feasibility of the solutions.
 
 ## 3.3 Actuators
 
