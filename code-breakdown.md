@@ -91,3 +91,56 @@ def utility_based_agent(cities, pheromone, alpha, beta, time_windows):
 
     return path, path_length
 ```
+
+### Define Ant Colony Optimization Function
+The function `ant_colony_optimization` takes 5 parameters:
+1. `cities`: City coordinates represented as (x,y).
+2. `n_ants`
+3. `n_iterations`
+4. `alpha`
+5. `beta`
+6. `evaporation_rate`
+7. `Q`: A hyperparameter to determine the amount of pheromone deposited on edges during local and global pheromone updates.  The higher the value of 'Q', the more pheromone is deposited.
+5. `time_windows`
+
+
+```python
+def ant_colony_optimization(cities, n_ants, n_iterations, alpha, beta, evaporation_rate, Q, time_windows):
+    n_cities = len(cities)
+    pheromone = np.ones((n_cities, n_cities))
+    best_path = None
+    best_path_length = np.inf
+
+    for iteration in range(n_iterations):
+        paths = []
+        path_lengths = []
+
+        for ant in range(n_ants):
+            path, path_length = utility_based_agent(cities, pheromone, alpha, beta, time_windows)
+            paths.append(path)
+            path_lengths.append(path_length)
+
+            if path_length < best_path_length:
+                best_path = path
+                best_path_length = path_length
+
+        pheromone *= evaporation_rate
+
+        for path, path_length in zip(paths, path_lengths):
+            for i in range(n_cities - 1):
+                pheromone[path[i] - 1, path[i + 1] - 1] += Q / path_length  # Subtract 1 to adjust for starting from 1
+            pheromone[path[-1] - 1, path[0] - 1] += Q / path_length  # Subtract 1 to adjust for starting from 1
+
+        # Dynamic pheromone update based on best path length found so far
+        if iteration % 10 == 0:  # Adjust evaporation rate every 10 iterations (can be adjusted as needed)
+            best_path_length_so_far = min(path_lengths)
+            evaporation_rate = 0.5 * (1 - (best_path_length_so_far / best_path_length))  # Example adjustment formula
+
+        #print(f"Iteration {iteration+1} - Pheromone Matrix:")
+        #print(pheromone) -- gives output for the pheromone level at each
+
+    # Ensure the best path ends with the same city as the first visited city
+    best_path.append(best_path[0])
+
+    return best_path, best_path_length
+```
