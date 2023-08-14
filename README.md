@@ -10,8 +10,8 @@ This document is divided into the following sections:
     * Steps
 3. [PEAS Definition](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/peas-def.md)
    * Optimal Path Identification
-5. [Python Program]([https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/code-breakdown.md](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/aco.py))
-6. [Tests' results and analyses]([https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/Tests/tests.md](https://github.com/wafaajaunnoo/AntsInMyCode/tree/main/Tests))
+5. [Python Program](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/aco.py)
+6. [Tests' results and analyses](https://github.com/wafaajaunnoo/AntsInMyCode/tree/main/Tests)
      
 **Submission date:** 18<sup>th</sup> August 2023
 
