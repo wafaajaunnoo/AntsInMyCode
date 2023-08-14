@@ -25,11 +25,8 @@ To ensure that the agent is taking into consideration the time window constraint
         #print("Probabilities:", probabilities)
 ```
 
-The same TSP was tested using the brute-force approach and the branch and bound method.  The results were compared, analyzed and displayed in the bar chat below.
-
-
-
-Essentially, since the agent in the ACO algorithm balances between intensification and diversification, a good combination of these 2 components will usually ensure that global optimality is achievable.  The selection of the best component guarantees that solutions converge to the optimum, but diversification via randomization enables the search to diverge from local optima while increasing the diversity of solutions.
+The same TSP was tested using the brute-force approach and the branch and bound method.  The results were compared and analyzed in [this](https://docs.google.com/spreadsheets/d/19O5P_cwfMBUUsHBFT-onme_q60WSVtzXhvDenepc0oc/edit?usp=sharing) sheet.
+Brute force does an extensive exploration of all city permutations, which results in a combinatorial explosion. As more cities are built, this method quickly becomes unfeasible.  Branch and bind involves considerable investigation of various routes even if its goal is to cut search tree branches that cannot lead to the best results. If the problem instance doesn't lend itself to efficient pruning, branch and bound may, in the worst case, display exponential time complexity.  ACO may concentrate on promising areas of the solution space thanks to its emergent behaviour without having to thoroughly investigate every possibility. This flexibility is very notable.  Pheromone levels are used by ACO to strike a balance between using established pathways and exploring unexplored ones. Due to the algorithm's dynamic modification, it is possible for it to avoid becoming caught in local optima and to stimulate the exploration of novel ideas, which increases the possibility of finding better answers more quickly.  Essentially, since the agent in the ACO algorithm balances between intensification and diversification, a good combination of these 2 components will usually ensure that global optimality is achievable.  The selection of the best component guarantees that solutions converge to the optimum, but diversification via randomization enables the search to diverge from local optima while increasing the diversity of solutions.  As far as the algorithm I built is concerned, the optimal path was identified at all times when the [final codes](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/aco.py) were executed. 
 
 ## 3.2 Environment
 
