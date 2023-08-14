@@ -16,16 +16,18 @@ At this stage, I realized that tuning the parameters in the code could enhance t
 
 When maintaining the same number of cities but reducing the number of ants, the runtime improved significantly from 48 seconds to 17 seconds.
 
-To ensure the dynamic update of pheromone levels, the values were printed for each iteration using the following lines of code, which were subsequently commented out for sanity. 
+To ensure that the agent is taking into consideration the time window constraints and that the probabilities and the dynamic updates of the pheromone levels are working, their values were printed for each iteration and commented out for sanity.
 
 ```python
         print(f"Iteration {iteration+1} - Pheromone Matrix:")
         print(pheromone) -- gives output for the pheromone level at each
+        #print(f"Ant visited city {next_point + 1} at time {arrival_time:.2f}")
+        #print("Probabilities:", probabilities)
 ```
 
-The output gave something like this:
+The same TSP was tested using the brute-force approach and the branch and bound method.  The results were compared, analyzed and displayed in the bar chat below.
 
---insert s.s of PL
+
 
 Essentially, since the agent in the ACO algorithm balances between intensification and diversification, a good combination of these 2 components will usually ensure that global optimality is achievable.  The selection of the best component guarantees that solutions converge to the optimum, but diversification via randomization enables the search to diverge from local optima while increasing the diversity of solutions.
 
@@ -35,7 +37,7 @@ The environment for the TSP consists of a graph with a set of cities and their c
 
 1. Full journey should form a Hamiltonian Cycle.
 2. All cities must be visited at least once.
-3. Cities must be vities during their respective time windows.
+3. Cities must be visited during their respective time windows.
 4. If time windows are violated, the violations should be minimized.
 
 These constraints affect the feasibility of the solutions.
