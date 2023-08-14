@@ -60,6 +60,16 @@ def utility_based_agent(cities, pheromone, alpha, beta, time_windows):
         unvisited = np.where(np.logical_not([v[0] for v in visited]))[0]
         probabilities = np.zeros(len(unvisited))
 
+    '''
+    - the penalties variable deals with the time window (TW) constraints.
+    - the penalties variable is added to the cost of an edge if it is travelled outside the TW
+    - The penalties variable is calculated as follows:
+            * if the current point has a later time than the unvisited point, then the penalties variable is increased by 100
+            * if the current point has an earlier time than the unvisied point, then the penalties variable is decreased by 100
+            * the penalties variable is then added to the cost of the edge when it is being considered by the ACO algorithm
+            * this means that the edges thata re travelled outside of the TW will have a higher cost, and are less likely t be chosen by the algorithm
+            * this helps to ensure that the salesman does not violate the TW constraint
+    '''
         for i, unvisited_point in enumerate(unvisited):
             penalties = 0
             if cities[current_point][1] > cities[unvisited_point][1]:
