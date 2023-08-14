@@ -27,6 +27,8 @@ The output gave something like this:
 
 --insert s.s of PL
 
+Essentially, since the agent in the ACO algorithm balances between intensification and diversification, a good combination of these 2 components will usually ensure that global optimality is achievable.  The selection of the best component guarantees that solutions converge to the optimum, but diversification via randomization enables the search to diverge from local optima while increasing the diversity of solutions.
+
 ## 3.2 Environment
 
 The environment for the TSP consists of a graph with a set of cities and their coordinates.  The environment also includes the following constraints:
