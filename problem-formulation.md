@@ -6,7 +6,7 @@
 3. Knowledge representation (provide detailed information about the problem and define all possible techniques).
 4. Problem-solving (selection of best technique(s)).
 -->
-I start this section by defining a TSP.  I follow with the simplification of the problem's complexity, which I define as the *constraints*, *objectives* and *miscellaneous **relevant** information that adds to the complexity*.  Later, I argue the rationale behind my choice to solve the TSP with the Ant Colony Optimization (ACO) algorithm.
+I start this section by defining a TSP.  I follow with the simplification of the problem's complexity, which I define as the *constraints* and *objectives*.  Later, I argue the rationale behind my choice to solve the TSP with the Ant Colony Optimization (ACO) algorithm.
 
 ## 2.1 The Travelling Salesman Problem
 The TSP is an NP-Hard combinatorial problem which consists of a salesman and a set of cities.  The TSP is for the salesman to find the shortest possible tour that visits each city exactly once and returns back to the starting city.  The main challenge of the problem is that the salesman wants to minimize the total length and cost of the trip.
