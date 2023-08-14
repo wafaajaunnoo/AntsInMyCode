@@ -34,7 +34,7 @@ The algorithmic design can be defined as follows:
 
 ### 3.2.2 Agent Behaviour
 * Make _k_ agents start from a random node and traverse the graph using the algorithm defined above. 
-* Agent balances between intensification.
+* Agent balances between intensification (small tenure localizes search) and diversification (large tenure forces exploration of wider space).
 * The agent considers time-based penalties and pheromone levels.
 * The agent evaluates each path based on the utilities provided.
 * Agent becomes more likely to exploit paths with higher pheromone levels.
@@ -45,7 +45,7 @@ The algorithmic design can be defined as follows:
 
 1. **Initialization State:** The agent starts in this state. It randomly selects a starting city, marks it as visited, and adds it to the path.
 2. **Path Construction State:** The agent repeatedly performs the aforementioned actions until all cities are visited. 
-3. **Rules:** When transitioning from one state to another, the agent also considers pheromone levels, cost, penalties, and heuristic information derived from the cost betwene cities.  These factors are used to calculate probabilities for selecting the next city to visit, guiding the agent's decision-making process.
+3. **Rules:** When transitioning from one state to another, the agent also considers pheromone levels, cost, penalties, and heuristic information derived from the cost between cities.  These factors are used to calculate probabilities for selecting the next city to visit, guiding the agent's decision-making process.
 4. Returning to the initial city.
 5. **Termination State.**
 
@@ -53,23 +53,20 @@ The algorithmic design can be defined as follows:
 The primary updates that occur relate to pheromone levels.
 * For each traversal, update the pheromone levels according to the function `Q`.
 * If a cycle which is better than the current best cycle is found, update it.
-* Global updates includes the addition of pheromone to all edges in the best cycle,
-* local updates involves the addition of a smaller amount of pheromone to the edges visited by each ant, promoting exploitation of shorter paths.
+* Global updates include the addition of pheromones to all edges in the best cycle.
+* Local updates involve the addition of a smaller amount of pheromone to the edges visited by each ant, promoting the exploitation of shorter paths.
 
 ### 3.2.5 Termination Conditions
-* Agent can explore path only if the time window of the next city allows it.
-* Iterate for a certain times, or until convergence.
+* Agent can explore path _iff_ the time window of the next city allows it.
+* Iterate for a certain number of times, or until convergence.
 * Do not terminate until all cities have been visited.
 
-
 ### 3.2.6 In detail:
-In detail, the steps of the algorithm are defined as:
+In detail, the steps of the algorithm are defined as shown below.  Alternatively, you can view a breakdown of the codes [here](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/code-breakdown.md).
 
-Alternatively, you can view a breakdown of the codes [here](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/code-breakdown.md).
+**Step 1: Import libraries.**
 
-**Step 1: Importing libraries.**
-
-**Step 2: Defining utility functions.**
+**Step 2: Define utility functions.**
 
 **Step 3: Define function for the utility-based agent** 
 * Keeps track of visited cities in list `visited`.
@@ -99,9 +96,9 @@ Alternatively, you can view a breakdown of the codes [here](https://github.com/w
 ## 3.3 Potential Improvements
 Some potential enhancements to this technique that I did not have time to implement:
 
-1. Because each ant is autonomous, traversals might be easily parallelelized. This is simple to accomplish with the multiprocessing Python module, however it does not operate by default on Mac. I chose portability above performance in this compromise.
+1. Because each ant is autonomous, traversals might be easily parallelized. This is simple to accomplish with the multiprocessing Python module, however, it does not operate by default on Mac. I chose portability above performance in this compromise.
 
-2. Choosing the next step in a traversal may be done in parallel with numpy vector multiplication, resulting in a 5x quicker overall performance. However, because to numerical instability, a leap to the same node may be repeated even though I was multiplying by zero, and fixing this error would have required more work than I believed was worthwhile.
+2. Choosing the next step in a traversal may be done in parallel with numpy vector multiplication, resulting in a 5x quicker overall performance. However, because of numerical instability, a leap to the same node may be repeated even though I was multiplying by zero, and fixing this error would have required more work than I believed was worthwhile.
 
 [Read about the PEAS definition.](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/peas-def.md)
 
