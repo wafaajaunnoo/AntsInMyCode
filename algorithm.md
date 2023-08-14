@@ -68,29 +68,33 @@ In detail, the steps of the algorithm are defined as:
 Alternatively, you can view a breakdown of the codes [here](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/code-breakdown.md).
 
 **Step 1: Importing libraries.**
-**Step 2:Defining utility functions.**
-**Step 3:Define function for the utility-based agent** 
-    * Keeps track of visited cities in list `visited`.
-    * Randomly selects an initial city for the agent and marks it as visited.
-    * Initializes `path` to store visited cities and `path_length` for the total length of the path
-    * Calculates probabilities for selecting next city to be visited based on constraints provided.
-    * If no valid time windows exists, set all probabilities to 1, to allow visiting any next city.
-    * Calculate arrival time at the next city and update `path`, `path_length` and `visited`.
-    * Return calculated `path` and `path_length`.
+
+**Step 2: Defining utility functions.**
+
+**Step 3: Define function for the utility-based agent** 
+* Keeps track of visited cities in list `visited`.
+* Randomly selects an initial city for the agent and marks it as visited.
+* Initializes `path` to store visited cities and `path_length` for the total length of the path
+* Calculates probabilities for selecting next city to be visited based on constraints provided.
+* If no valid time windows exists, set all probabilities to 1, to allow visiting any next city.
+* Calculate arrival time at the next city and update `path`, `path_length` and `visited`.
+* Return calculated `path` and `path_length`.
+    
 **Step 4: Define function `ant_colony_optimization`**
-    * Proceeds with iterations to find best path and cheapest length.
-    * Stores the path and length in lists `paths` and `path_lengths`.
-    * Updates pheromone levels by evaporating previous pheromones and depositing new pheromones based on paths taken by agents.
-    * Pheromone is dynamicall updated.
-    * Ensures the best path ends with the same city as the first-visited city.
-    * Returns `best_path` and `best_path_length`.
+* Proceeds with iterations to find best path and cheapest length.
+* Stores the path and length in lists `paths` and `path_lengths`.
+* Updates pheromone levels by evaporating previous pheromones and depositing new pheromones based on paths taken by agents.
+* Pheromone is dynamically updated.
+* Ensures the best path ends with the same city as the first-visited city.
+* Returns `best_path` and `best_path_length`.
+    
 **Step 5: Main execution block** 
-    * Used mainly to output results.
-    * Sets a random seed for reproducibility.
-    * Generates random city coordinates using `np.random.rand`.
-    * Calls `ant_colony_optimization` with specified parameters to find the best path and length.
-    * Prints cheapest path and its length.
-    * Extract and plot x, y, and z coordinates for all cities.
+* Used mainly to output results.
+* Sets a random seed for reproducibility.
+* Generates random city coordinates using `np.random.rand`.
+* Calls `ant_colony_optimization` with specified parameters to find the best path and length.
+* Prints cheapest path and its length.
+* Extract and plot x, y, and z coordinates for all cities.
 
 ## 3.3 Potential Improvements
 Some potential enhancements to this technique that I did not have time to implement:
