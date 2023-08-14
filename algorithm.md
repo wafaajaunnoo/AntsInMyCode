@@ -103,5 +103,6 @@ Some potential enhancements to this technique that I did not have time to implem
 
 2. Choosing the next step in a traversal may be done in parallel with numpy vector multiplication, resulting in a 5x quicker overall performance. However, because to numerical instability, a leap to the same node may be repeated even though I was multiplying by zero, and fixing this error would have required more work than I believed was worthwhile.
 
+[Read about the PEAS definition.](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/peas-def.md)
 
 
