@@ -64,6 +64,6 @@ While all of these methods provide optimal solutions to TSP, they are rarely use
 ### 2.3.1 Evolutionary Optimization Algorithms
 Finding an algorithm that reduces computation is necessary to solve the TSP.  The Ant Colony Optimization (ACO) algorithm is a good fit for discrete and non-deterministic optimization problems like the TSP because the algorithm searched through the solution space efficiently.  Ordinarily, genetic algorithms and simulated annealing provide efficient and good solutions to the TSP but are more complex to implement and tune than ACO.  In sum, the ACO algorithm is a better fit to solve the TSP.
 
-
+[Read about the algorithmic design for this TSP.](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/algorithm.md)
 
 
