@@ -1,5 +1,5 @@
 # 1. Introduction
-For this assignment, I conceptually break down an NP-Hard combinatorial problem that I formulated - the Travelling Salesman Problem, otherwise referred to in this repository as 'TSP'.  I also provide a detailed understanding of the problem, which includes the understanding of the algorithm, data structures and tests I used to execute the problem in Python.
+For this assignment, I conceptually break down an NP-Hard combinatorial problem that I formulated - the Travelling Salesman Problem [hereafter: TSP].  I also provide a detailed understanding of the problem, which includes the understanding of the algorithm, data structures and tests I used to execute the problem in Python.
 
 This repository is divided into the following sections:
 1. [Combinatorial Problem Formulation](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/problem-formulation.md)

@@ -3,7 +3,7 @@ Having formulated the problem, I now design the algorithm for the TSP based on t
 
 ## 3.1 Ant Colony Optimization
 
-Ant colony optimisation (ACO) draws its inspiration from several ant species' foraging strategies. These ants leave pheromone trails on the ground to indicate a good route for the colony's other ants to take. An analogous method is used by ant colony optimisation to address optimisation issues. <sup><sub>[[7]](https://www.researchgate.net/publication/308953674_Ant_Colony_Optimization).</sub></sup>
+Ant colony optimisation [hereafter: ACO] draws its inspiration from several ant species' foraging strategies. These ants leave pheromone trails on the ground to indicate a good route for the colony's other ants to take. An analogous method is used by ant colony optimisation to address optimisation issues. <sup><sub>[[7]](https://www.researchgate.net/publication/308953674_Ant_Colony_Optimization).</sub></sup>
 ### The Algorithm
 To solve any problem that exists, a Turing Machine would:
 1. Start with an input string on its tape.
@@ -18,8 +18,10 @@ I begin the algorithm by first initializing a pheromone trail between all cities
 The algorithmic design can be defined as follows:
 
 <sup><sub>You can view the codes for the below algorithmic design [here](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/pseudocode.js-master/docs/pseudocode.html).</sub></sup>
+
+
 <p align="center">
-<img width="573" alt="Screenshot 2023-08-11 at 22 32 46" src="https://github.com/wafaajaunnoo/AntsInMyCode/assets/95095359/fe23a9d5-ca73-46c1-8414-c296d0fab371">
+<img width="573" alt="Algorithmic Design" src="/assets/algorithmic-design.png">
 </p>
 
 ## 3.2 Steps
