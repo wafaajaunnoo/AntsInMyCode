@@ -18,8 +18,10 @@ I begin the algorithm by first initializing a pheromone trail between all cities
 The algorithmic design can be defined as follows:
 
 <sup><sub>You can view the codes for the below algorithmic design [here](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/pseudocode.js-master/docs/pseudocode.html).</sub></sup>
+
+
 <p align="center">
-<img width="573" alt="Screenshot 2023-08-11 at 22 32 46" src="https://github.com/wafaajaunnoo/AntsInMyCode/assets/95095359/fe23a9d5-ca73-46c1-8414-c296d0fab371">
+<img width="573" alt="Algorithmic Design" src="https://github.com/wafaajaunnoo/AntsInMyCode/assets/algorithmic-design.png">
 </p>
 
 ## 3.2 Steps
