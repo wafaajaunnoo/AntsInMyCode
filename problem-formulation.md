@@ -6,7 +6,7 @@
 3. Knowledge representation (provide detailed information about the problem and define all possible techniques).
 4. Problem-solving (selection of best technique(s)).
 -->
-I start this section by defining a TSP.  I follow with the simplification of the problem's complexity, which I define as the *constraints*, *objectives* and *miscellaneous **relevant** information that adds to the complexity*.  Later, I argue the rationale behind my choice to solve the TSP with the Ant Colony Optimization (ACO) algorithm.
+I start this section by defining a TSP.  I follow with the simplification of the problem's complexity, which I define as the *constraints* and *objectives*.  Later, I argue the rationale behind my choice to solve the TSP with the Ant Colony Optimization (ACO) algorithm.
 
 ## 2.1 The Travelling Salesman Problem
 The TSP is an NP-Hard combinatorial problem which consists of a salesman and a set of cities.  The TSP is for the salesman to find the shortest possible tour that visits each city exactly once and returns back to the starting city.  The main challenge of the problem is that the salesman wants to minimize the total length and cost of the trip.
@@ -64,6 +64,6 @@ While all of these methods provide optimal solutions to TSP, they are rarely use
 ### 2.3.1 Evolutionary Optimization Algorithms
 Finding an algorithm that reduces computation is necessary to solve the TSP.  The Ant Colony Optimization (ACO) algorithm is a good fit for discrete and non-deterministic optimization problems like the TSP because the algorithm searched through the solution space efficiently.  Ordinarily, genetic algorithms and simulated annealing provide efficient and good solutions to the TSP but are more complex to implement and tune than ACO.  In sum, the ACO algorithm is a better fit to solve the TSP.
 
-
+[Read about the algorithmic design for this TSP.](https://github.com/wafaajaunnoo/AntsInMyCode/blob/main/algorithm.md)
 
 
