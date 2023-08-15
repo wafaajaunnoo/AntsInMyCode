@@ -3,7 +3,7 @@ Having formulated the problem, I now design the algorithm for the TSP based on t
 
 ## 3.1 Ant Colony Optimization
 
-Ant colony optimisation (ACO) draws its inspiration from several ant species' foraging strategies. These ants leave pheromone trails on the ground to indicate a good route for the colony's other ants to take. An analogous method is used by ant colony optimisation to address optimisation issues. <sup><sub>[[7]](https://www.researchgate.net/publication/308953674_Ant_Colony_Optimization).</sub></sup>
+Ant colony optimisation [hereafter: ACO] draws its inspiration from several ant species' foraging strategies. These ants leave pheromone trails on the ground to indicate a good route for the colony's other ants to take. An analogous method is used by ant colony optimisation to address optimisation issues. <sup><sub>[[7]](https://www.researchgate.net/publication/308953674_Ant_Colony_Optimization).</sub></sup>
 ### The Algorithm
 To solve any problem that exists, a Turing Machine would:
 1. Start with an input string on its tape.
