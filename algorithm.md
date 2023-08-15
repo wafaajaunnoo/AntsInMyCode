@@ -21,7 +21,7 @@ The algorithmic design can be defined as follows:
 
 
 <p align="center">
-<img width="573" alt="Algorithmic Design" src="https://github.com/wafaajaunnoo/AntsInMyCode/assets/algorithmic-design.png">
+<img width="573" alt="Algorithmic Design" src="/assets/algorithmic-design.png">
 </p>
 
 ## 3.2 Steps
