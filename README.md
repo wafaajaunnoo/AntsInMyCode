@@ -17,4 +17,4 @@ This repository is divided into the following sections:
 
 **Submission date:** 14<sup>th</sup> August 2023
 
-**Grade:** Not graded yet.
+**Grade:** 9.8/10
